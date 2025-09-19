@@ -3,30 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Investigaciones y Estadísticas Clínicas | H&B</title>
+  <title>Producción Propia | Diseño y Estadística Biomédica</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <script>
-  // Toggle collapsible menu
   function toggleMenu() {
     const menu = document.getElementById("navMenu");
     menu.classList.toggle("active");
   }
 
-  // Highlight the active link based on current URL
   document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('.nav-column a');
     const currentPage = window.location.pathname.split('/').pop();
-
     links.forEach(link => {
-      const linkPage = link.getAttribute('href');
-      if (linkPage === currentPage) {
+      if (link.getAttribute('href') === currentPage) {
         link.classList.add('active');
       }
     });
   });
 </script>
-
 
 <body>
   <header>
@@ -34,71 +29,96 @@
   </header>
 
   <nav class="navbar">
-  <div class="nav-container">
-    <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
-    <div class="nav-columns" id="navMenu">
-      <div class="nav-column">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-      </div>
-      <div class="nav-column">
-        <a href="quehacemos.html">Qué Hacemos</a>
-        <a href="disenoyestadisticacientifica.html">Diseño y Estadística Científica</a>
-      </div>
-      <div class="nav-column">
-        <a href="investigacionesyestadisticaclinica.html">Investigaciones Clínicas</a>
-        <a href="contacto.html">Contacto</a>
+    <div class="nav-container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+      <div class="nav-columns" id="navMenu">
+        <div class="nav-column">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+        </div>
+        <div class="nav-column">
+          <a href="quehacemos.html">Qué Hacemos</a>
+          <a href="disenoyestadisticacientifica.html">Diseño y Estadística Científica</a>
+        </div>
+        <div class="nav-column">
+          <a href="investigacionesyestadisticaclinica.html">Investigaciones Clínicas</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
 
   <main class="container">
     <section>
       <h2>Publicaciones Propias y Referatos</h2>
-      <h3>Centenares de trabajos científicos presentados en Congresos de diversas disciplinas y especialidades.</h3>
+      <p>Centenares de trabajos científicos presentados en Congresos de diversas disciplinas y especialidades.</p>
       <p>Numerosos trabajos científicos publicados en revistas nacionales e internacionales con referato.</p>
     </section>
 
     <section>
-      <h3>Diseño y Estadística Biomédica</h3>
-      <ul>Revista Argentina de Nefrología, Diálisis y Trasplante (Rev Nefrol Dial Traspl) e-ISSN 2346-8548; ISSN 0326-342</ul>
-Prensa Medica Argentina (Prensa Med Argent – ISSN 0032-745X)
-Revista de Nefrología -Argentina- (ISSN 2591-278X)
-Revista Argentina de Gerontología y Geriatría (Rev Arg de Gerontología y Geriatría) ISSN 950-9247-17-0
-Nefrología (Española) (ISSN: 0211-6995 – e-ISSN: 1989-2284)
-Medicina, Buenos Aires (ISSN 0025-7680 (Impresa) ISSN 1669-9106 (En línea))
-Medicina Cutánea Ibero-Latinoamericana (Med Cutan Iber Lat Amer)
-Transplant International (Transplant Int) ISSN:1432-2277
-Journal of Cardiovascular Pharmacology (J Cardiovasc Pharmacol) ISSN: 0160-2446 e- ISSN: 1533-4023
-International Journal of Pharmaceutical Medicine (Int J Pharmaceut Med) ISSN 1364-9027
-International Journal of Pediatric Otolaringology (Int J Ped Otolaring)
-Intercontinental Cardiology (Intercontinental Cardiol)
-Clinical Genetics (Clin Genetics) ISSN:1399-0004
-Clinical Kidney Journal (Clin Kid J) ISSN 2048-8505 eISSN 2048-8513
-Clinical Cardiology (Clin Cardiol) e-ISSN:1932-8737
-European Journal of Rheumatology (Eur J Rheumatol)
-Clinical and Experimental Nephrology (Clin Exp Nephrol) ISSN: 1342-1751 e-ISSN 1437-7799
-Dialysis and Transplant (Dial & Transplant – Elsevier) ISSN:1932-6920
-Chemotherapy ISSN: 0009-3157 e-ISSN: 1421-9794
-Nephrology, Dialysis end Transplantation (Nephrol Dial Transplant) ISSN 0931-0509 eISSN 1460- 2385
-American Journal of Kidney Diseases (AJKD)
-Nephrology (Carlton) ISSN:1440-1797</ul>
+      <h3>Revistas con Publicaciones</h3>
+      <ul>
+        <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
+        <li>Prensa Médica Argentina</li>
+        <li>Revista de Nefrología -Argentina-</li>
+        <li>Revista Argentina de Gerontología y Geriatría</li>
+        <li>Nefrología (España)</li>
+        <li>Medicina, Buenos Aires</li>
+        <li>Medicina Cutánea Ibero-Latinoamericana</li>
+        <li>Transplant International</li>
+        <li>Journal of Cardiovascular Pharmacology</li>
+        <li>International Journal of Pharmaceutical Medicine</li>
+        <li>International Journal of Pediatric Otolaringology</li>
+        <li>Intercontinental Cardiology</li>
+        <li>Clinical Genetics</li>
+        <li>Clinical Kidney Journal</li>
+        <li>Clinical Cardiology</li>
+        <li>European Journal of Rheumatology</li>
+        <li>Clinical and Experimental Nephrology</li>
+        <li>Dialysis and Transplant</li>
+        <li>Chemotherapy</li>
+        <li>Nephrology, Dialysis and Transplantation</li>
+        <li>American Journal of Kidney Diseases</li>
+        <li>Nephrology (Carlton)</li>
+      </ul>
     </section>
 
     <section>
-      <h3>Evidencia Basada en la Práctica</h3>
-      <p>La actividad clínica aislada y con inadecuado fundamento desde lo básico corre el riesgo de transformarse en una actividad automatizada, refleja y empírica.</p>
-      <p>El investigador “nato” muchas veces carece de habilidad para visualizar la aplicación clínica de sus resultados, mientras que el clínico purista puede no tener la inclinación para formular preguntas científicas sobre los fenómenos que observa.</p>
-      <p>Para cerrar esta brecha, han surgido estrategias como la medicina basada en la evidencia. Pero ¿quién define esa evidencia? ¿Quién la recolecta y la comunica como verdad absoluta?</p>
+      <h3>Revisores en Revistas Científicas</h3>
+      <ul>
+        <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
+        <li>Nefrología Latinoamericana (Elsevier)</li>
+        <li>Electron Journal of Medicine</li>
+        <li>Nephrology (Carlton)</li>
+        <li>Journal of Nephrology and Therapeutics</li>
+        <li>World Journal of Nephrology</li>
+        <li>American Journal of Kidney Diseases</li>
+        <li>Nephrology, Dialysis and Transplantation</li>
+        <li>Biocybernetics and Biomedical Engineering</li>
+      </ul>
     </section>
 
     <section>
-      <h3>Evaluación Crítica de la Evidencia</h3>
-      <p>La “evidencia” muchas veces proviene de resultados publicados en journals de alto impacto, pero con posibles sesgos que responden a intereses específicos.</p>
-      <p>El acercamiento entre medicina clínica y ciencias básicas debe formar médicos con experiencia amplia e intereses complementarios, capaces de integrar la investigación a la práctica cotidiana y distinguir lo sesgado de lo justo, lo desechable de lo confiable.</p>
-      <p>La currícula médica actual no contempla la capacidad de juzgar la validez de lo publicado ni de identificar problemas que requieren un enfoque científico. Tampoco promueve la generación de propuestas para resolverlos.</p>
+      <h3>Premios Nacionales e Internacionales</h3>
+      <ul>
+        <li>Premio Sociedad Ibero-Latinoamericana de Dermatología (1984–1985)</li>
+        <li>Premio “Victor Raúl Miatello” – Sociedad Argentina de Nefrología</li>
+        <li>Premio Sociedad de Obstetricia y Ginecología de Buenos Aires (1998)</li>
+        <li>Premio “Peter Brandt” – Asociación de Médicos Asesores (2001)</li>
+        <li>Mención Especial – National Kidney Foundation (2002)</li>
+        <li>Mención Especial – Sociedad Argentina de Nefrología (2003)</li>
+        <li>Blue Ribbon Poster – Congreso Mundial de Nefrología, Berlín (2003)</li>
+        <li>Premio al Mejor Resumen – XV Congreso Argentino de Nefrología (2007)</li>
+        <li>2do Premio – Hospital Juan A. Fernández (2008)</li>
+        <li>Beca – Sociedad Española de Nefrología (2009)</li>
+        <li>Premio al Mejor Poster – Asociación Nefrológica de Buenos Aires (2010)</li>
+        <li>Poster Distinguido – Asociación Nefrológica de Buenos Aires (2012)</li>
+        <li>Beca – SLANH (2012)</li>
+        <li>Beca – ASN/SLANH Kidney Week San Diego (2012, 2015)</li>
+        <li>Premio Amílcar Challu – ANBA (2016)</li>
+        <li>Trabajo Distinguido – ANBA (2018)</li>
+        <li>Trabajo Distinguido – XXI Congreso Argentino de Nefrología (2019)</li>
+      </ul>
     </section>
   </main>
 
@@ -106,7 +126,7 @@ Nephrology (Carlton) ISSN:1440-1797</ul>
     <div class="footer-content">
       <h4>H&B</h4>
       <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
-      <p><strong>Contactanos</strong> <br>
+      <p><strong>Contactanos</strong><br>
       (Garantizamos la absoluta confidencialidad de tus proyectos y datos)</p>
       <p>Dejanos tu mensaje o inquietud y nos contactaremos a la brevedad. <br>
       Si tenés teléfono fijo o celular háznoslo saber; facilita el contacto y la comunicación.</p>
