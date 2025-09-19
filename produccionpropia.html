@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Investigaciones y Estadísticas Clínicas | H&B</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<script>
+  // Toggle collapsible menu
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
+
+  // Highlight the active link based on current URL
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.nav-column a');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+
+<body>
+  <header>
+    <img src="images/banner1.jpg" alt="Diseño y Estadística Biomédica Banner" class="banner" />
+  </header>
+
+  <nav class="navbar">
+  <div class="nav-container">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+    <div class="nav-columns" id="navMenu">
+      <div class="nav-column">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+      </div>
+      <div class="nav-column">
+        <a href="quehacemos.html">Qué Hacemos</a>
+        <a href="disenoyestadisticacientifica.html">Diseño y Estadística Científica</a>
+      </div>
+      <div class="nav-column">
+        <a href="investigacionesyestadisticaclinica.html">Investigaciones Clínicas</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <main class="container">
+    <section>
+      <h2>Publicaciones Propias y Referatos</h2>
+      <h3>Centenares de trabajos científicos presentados en Congresos de diversas disciplinas y especialidades.</h3>
+      <p>Numerosos trabajos científicos publicados en revistas nacionales e internacionales con referato.</p>
+    </section>
+
+    <section>
+      <h3>Diseño y Estadística Biomédica</h3>
+      <ul>Revista Argentina de Nefrología, Diálisis y Trasplante (Rev Nefrol Dial Traspl) e-ISSN 2346-8548; ISSN 0326-342
+Prensa Medica Argentina (Prensa Med Argent – ISSN 0032-745X)
+Revista de Nefrología -Argentina- (ISSN 2591-278X)
+Revista Argentina de Gerontología y Geriatría (Rev Arg de Gerontología y Geriatría) ISSN 950-9247-17-0
+Nefrología (Española) (ISSN: 0211-6995 – e-ISSN: 1989-2284)
+Medicina, Buenos Aires (ISSN 0025-7680 (Impresa) ISSN 1669-9106 (En línea))
+Medicina Cutánea Ibero-Latinoamericana (Med Cutan Iber Lat Amer)
+Transplant International (Transplant Int) ISSN:1432-2277
+Journal of Cardiovascular Pharmacology (J Cardiovasc Pharmacol) ISSN: 0160-2446 e- ISSN: 1533-4023
+International Journal of Pharmaceutical Medicine (Int J Pharmaceut Med) ISSN 1364-9027
+International Journal of Pediatric Otolaringology (Int J Ped Otolaring)
+Intercontinental Cardiology (Intercontinental Cardiol)
+Clinical Genetics (Clin Genetics) ISSN:1399-0004
+Clinical Kidney Journal (Clin Kid J) ISSN 2048-8505 eISSN 2048-8513
+Clinical Cardiology (Clin Cardiol) e-ISSN:1932-8737
+European Journal of Rheumatology (Eur J Rheumatol)
+Clinical and Experimental Nephrology (Clin Exp Nephrol) ISSN: 1342-1751 e-ISSN 1437-7799
+Dialysis and Transplant (Dial & Transplant – Elsevier) ISSN:1932-6920
+Chemotherapy ISSN: 0009-3157 e-ISSN: 1421-9794
+Nephrology, Dialysis end Transplantation (Nephrol Dial Transplant) ISSN 0931-0509 eISSN 1460- 2385
+American Journal of Kidney Diseases (AJKD)
+Nephrology (Carlton) ISSN:1440-1797</ul>
+    </section>
+
+    <section>
+      <h3>Evidencia Basada en la Práctica</h3>
+      <p>La actividad clínica aislada y con inadecuado fundamento desde lo básico corre el riesgo de transformarse en una actividad automatizada, refleja y empírica.</p>
+      <p>El investigador “nato” muchas veces carece de habilidad para visualizar la aplicación clínica de sus resultados, mientras que el clínico purista puede no tener la inclinación para formular preguntas científicas sobre los fenómenos que observa.</p>
+      <p>Para cerrar esta brecha, han surgido estrategias como la medicina basada en la evidencia. Pero ¿quién define esa evidencia? ¿Quién la recolecta y la comunica como verdad absoluta?</p>
+    </section>
+
+    <section>
+      <h3>Evaluación Crítica de la Evidencia</h3>
+      <p>La “evidencia” muchas veces proviene de resultados publicados en journals de alto impacto, pero con posibles sesgos que responden a intereses específicos.</p>
+      <p>El acercamiento entre medicina clínica y ciencias básicas debe formar médicos con experiencia amplia e intereses complementarios, capaces de integrar la investigación a la práctica cotidiana y distinguir lo sesgado de lo justo, lo desechable de lo confiable.</p>
+      <p>La currícula médica actual no contempla la capacidad de juzgar la validez de lo publicado ni de identificar problemas que requieren un enfoque científico. Tampoco promueve la generación de propuestas para resolverlos.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h4>H&B</h4>
+      <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
+      <p><strong>Contactanos</strong> <br>
+      (Garantizamos la absoluta confidencialidad de tus proyectos y datos)</p>
+      <p>Dejanos tu mensaje o inquietud y nos contactaremos a la brevedad. <br>
+      Si tenés teléfono fijo o celular háznoslo saber; facilita el contacto y la comunicación.</p>
+    </div>
+  </footer>
+</body>
+</html>
