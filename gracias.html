@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gracias | Diseño y Estadística Biomédica</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta http-equiv="refresh" content="5;url=index.html" />
+  <style>
+    .countdown {
+      font-size: 18px;
+      color: #1A2E40;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<script>
+  let seconds = 5;
+  const countdown = document.getElementById("seconds");
+
+  const timer = setInterval(() => {
+    seconds--;
+    countdown.textContent = seconds;
+    if (seconds <= 0) clearInterval(timer);
+  }, 1000);
+</script>
+<body>
+  <header>
+    <img src="images/banner1.jpg" alt="Banner de agradecimiento" class="banner" />
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+      <div class="nav-columns" id="navMenu">
+        <div class="nav-column">
+          <a href="index.html">Inicio</a>
+          <a href="quehacemos.html">Qué Hacemos</a>
+        </div>
+        <div class="nav-column">
+          <a href="investigacionesyestadisticaclinica.html">Investigaciones Clínicas</a>
+          <a href="disenoyestadisticacientifica.html">Diseño y Estadística Científica</a>
+        </div>
+        <div class="nav-column">
+          <a href="produccionpropia.html">Producción propia</a>
+        </div>
+        <div class="nav-column">
+          <a href="servicios.html">Servicios</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section>
+      <p class="countdown">Serás redirigido al inicio en <span id="seconds">5</span> segundos...</p>
+        <h2>¡Gracias por tu mensaje!</h2>
+      <p>Tu consulta ha sido enviada correctamente. Nos pondremos en contacto a la brevedad.</p>
+      <p>Si querés volver al inicio, hacé clic abajo:</p>
+      <a href="index.html" class="cta-button">Volver al Inicio</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h4>H&B</h4>
+      <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
+      <p><strong>Contactanos</strong><br>
+      (Garantizamos la absoluta confidencialidad de tus proyectos y datos)</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('.nav-column a');
+      const currentPage = window.location.pathname.split('/').pop();
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
