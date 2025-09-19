@@ -6,8 +6,8 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f9f9f9;
-    color: #333;
+    background: #F5F7FA;
+    color: #2C2C2C;
   }
   
   .container {
@@ -24,25 +24,46 @@
     margin-bottom: 0;
   }
   
-  /* Navigation */
-  nav {
-    background: #003f6b;
+  /* Navigation Menu */
+  .navbar {
+    background-color: #1A2E40;
+    padding: 10px 20px;
   }
   
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 10px;
+  .nav-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
-  nav ul li {
-    margin: 0 15px;
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
   }
   
-  nav ul li a {
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 8px 0;
+  }
+  
+  .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -50,30 +71,86 @@
     transition: color 0.3s ease;
   }
   
-  nav ul li a:hover {
-    color: #ffcc00;
+  .nav-links li a:hover {
+    color: #4DA1A9;
   }
   
-  /* Main Content */
+  /* Headings */
   main h2 {
-    color: #005b96;
+    color: #1A2E40;
     margin-top: 30px;
+    font-size: 24px;
   }
   
+  main h3 {
+    color: #1A2E40;
+    margin-top: 25px;
+    font-size: 20px;
+  }
+  
+  /* Lists */
   main ul {
     padding-left: 20px;
+    margin-bottom: 20px;
   }
   
   main ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    color: #1A2E40;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #fff;
+  }
+  
+  .contact-form button {
+    background-color: #1A2E40;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #4DA1A9;
   }
   
   /* Footer */
   footer {
-    background: #005b96;
+    background-color: #1A2E40;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
+    padding: 30px 20px;
+    font-size: 15px;
+  }
+  
+  .footer-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4DA1A9;
+  }
+  
+  .footer-content p {
+    margin: 8px 0;
+    line-height: 1.6;
   }
