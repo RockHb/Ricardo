@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios | Diseño y Estadística Biomédica</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/banner1.jpg" alt="Diseño y Estadística Biomédica Banner" class="banner" />
+  </header>
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
+
+  // Highlight active link
+  const links = document.querySelectorAll('.nav-links a');
+  const current = window.location.pathname.split('/').pop();
+  links.forEach(link => {
+    if (link.getAttribute('href') === current) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quehacemos.html">Qué Hacemos</a></li>
+      <li><a href="disenoyestadisticacientifica.html">Diseño y Estadística Científica</a></li>
+      <li><a href="investigacionesyestadisticaclinica.html">Investigaciones y Estadísticas Clínicas</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+  <main class="container">
+    <section>
+      <h2>Servicios de Consultoría</h2>
+      <p>Brindamos soluciones integrales para investigadores, profesionales de la salud y estudiantes que buscan apoyo en el diseño y análisis de estudios clínicos.</p>
+    </section>
+
+    <section>
+      <h3>Diseño Metodológico</h3>
+      <ul>
+       
