@@ -7,18 +7,23 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <script>
+  // Toggle collapsible menu
   function toggleMenu() {
     const menu = document.getElementById("navMenu");
     menu.classList.toggle("active");
   }
 
-  // Highlight active link
-  const links = document.querySelectorAll('.nav-links a');
-  const current = window.location.pathname.split('/').pop();
-  links.forEach(link => {
-    if (link.getAttribute('href') === current) {
-      link.classList.add('active');
-    }
+  // Highlight the active link based on current URL
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.nav-column a');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
   });
 </script>
 
