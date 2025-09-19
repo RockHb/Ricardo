@@ -181,3 +181,65 @@ footer {
   margin: 8px 0;
   line-height: 1.6;
 }
+/* ─────────────────────────────────────────────── */
+/* 📱 Responsive Layout for Mobile Devices */
+/* ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Container */
+  .container {
+    padding: 15px;
+  }
+
+  /* Headings */
+  main h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  main h3 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  /* Navigation */
+  .nav-columns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-column {
+    width: 100%;
+    padding: 10px;
+    min-width: unset;
+  }
+
+  .menu-toggle {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Contact Form */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+
+  .footer-content h4 {
+    font-size: 18px;
+  }
+
+  .footer-content p {
+    font-size: 14px;
+  }
+}
