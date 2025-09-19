@@ -28,7 +28,11 @@
   .navbar {
     background-color: #1A2E40;
     padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
+  
   
   .nav-container {
     display: flex;
@@ -74,6 +78,12 @@
   .nav-links li a:hover {
     color: #4DA1A9;
   }
+
+  .nav-links li a.active {
+    color: #4DA1A9;
+    border-bottom: 2px solid #4DA1A9;
+  }
+  
   
   /* Headings */
   main h2 {

@@ -13,6 +13,17 @@
       menu.classList.toggle("active");
     }
   </script>
+<script>
+    const links = document.querySelectorAll('.nav-links a');
+    const current = window.location.pathname.split('/').pop();
+  
+    links.forEach(link => {
+      if (link.getAttribute('href') === current) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+  
 <body>
   <header>
     <img src="images/banner1.jpg" alt="Diseño y Estadística Biomédica Banner" class="banner" />
