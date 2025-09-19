@@ -1,4 +1,9 @@
-body {
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #f9f9f9;
@@ -11,18 +16,15 @@ body {
     padding: 20px;
   }
   
-  header {
-    background: #005b96;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+  /* Banner */
+  .banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0;
   }
   
-  .logo {
-    max-width: 120px;
-    margin-bottom: 10px;
-  }
-  
+  /* Navigation */
   nav {
     background: #003f6b;
   }
@@ -33,6 +35,7 @@ body {
     padding: 10px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   
   nav ul li {
@@ -43,16 +46,34 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
   }
   
+  nav ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Main Content */
   main h2 {
     color: #005b96;
+    margin-top: 30px;
   }
   
+  main ul {
+    padding-left: 20px;
+  }
+  
+  main ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
   footer {
     background: #005b96;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    font-size: 14px;
   }
