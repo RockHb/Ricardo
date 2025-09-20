@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiénes Somos | Diseño y Estadística Biomédica</title>
+  <title>Gracias | Diseño y Estadística Biomédica</title>
   <link rel="stylesheet" href="css/style.css" />
-  <meta name="description" content="Equipo médico especializado en estadística para ciencias de la salud. Más de 30 años de experiencia en investigación clínica y asesoramiento científico.">
-  <meta name="keywords" content="estadística médica, investigación clínica, asesoramiento científico, traducción científica">
+  <meta name="description" content="Mensaje enviado correctamente. Serás redirigido al inicio en unos segundos.">
+  <meta name="keywords" content="contacto, agradecimiento, estadística biomédica">
   <style>
     .nav-header {
       display: flex;
@@ -44,40 +44,36 @@
       transform: scale(1.2);
       fill: #4DA1A9;
     }
+
+    .countdown {
+      font-size: 16px;
+      color: #1A2E40;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #1A2E40;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #4DA1A9;
+    }
   </style>
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let seconds = 5;
-    const countdown = document.getElementById("seconds");
 
-    const timer = setInterval(() => {
-      seconds--;
-      countdown.textContent = seconds;
-      if (seconds <= 0) clearInterval(timer);
-    }, 1000);
-  });  
-  function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.nav-column a');
-    const currentPage = window.location.pathname.split('/').pop();
-    links.forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
 <body>
   <header>
     <img src="images/banner1.jpg" alt="Banner de agradecimiento" class="banner" />
   </header>
 
-   <nav class="navbar">
+  <nav class="navbar">
     <div class="nav-container">
       <div class="nav-header">
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
@@ -101,7 +97,6 @@
         <div class="nav-column">
           <a href="produccionpropia.html">Producción propia</a>
           <a href="servicios.html">Servicios</a>
-          
         </div>
         <div class="nav-column">
           <a href="contacto.html">Contacto</a>
@@ -113,9 +108,9 @@
   <main class="container">
     <section>
       <p class="countdown">Serás redirigido al inicio en <span id="seconds">5</span> segundos...</p>
-        <h2>¡Gracias por tu mensaje!</h2>
+      <h2>¡Gracias por tu mensaje!</h2>
       <p>Tu consulta ha sido enviada correctamente. Nos pondremos en contacto a la brevedad.</p>
-      <p>Si querés volver al inicio, hacé clic abajo:</p>
+      <p>Si querés volver al inicio ahora, hacé clic abajo:</p>
       <a href="index.html" class="cta-button">Volver al Inicio</a>
     </section>
   </main>
@@ -136,6 +131,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function () {
+      // Highlight active link
       const links = document.querySelectorAll('.nav-column a');
       const currentPage = window.location.pathname.split('/').pop();
       links.forEach(link => {
@@ -143,13 +139,20 @@
           link.classList.add('active');
         }
       });
+
+      // Countdown and redirect
+      let seconds = 5;
+      const countdown = document.getElementById("seconds");
+
+      const timer = setInterval(() => {
+        seconds--;
+        countdown.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          window.location.href = "index.html";
+        }
+      }, 1000);
     });
   </script>
-     <footer>
-    <div class="footer-content">
-      <h4>H&B</h4>
-      <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
-       </div>
-  </footer>
 </body>
 </html>
