@@ -244,28 +244,44 @@ footer {
     padding: 15px;
   }
 
- .nav-header {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
-}
+  .nav-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
 
-.menu-toggle {
-  font-size: 18px;
-  margin-bottom: 0;
-  padding: 8px 12px;
-  text-align: left;
-}
+  .menu-toggle,
+  .home-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+  }
 
-.home-button {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
- 
+  .menu-toggle:hover,
+  .home-button:hover {
+    color: #4DA1A9;
+  }
+
+  .home-button svg {
+    margin-right: 6px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+
+  .home-button:hover svg {
+    transform: scale(1.2);
+    fill: #4DA1A9;
+  }
+
   main h2 {
     font-size: 20px;
     margin-top: 20px;
@@ -285,11 +301,6 @@ footer {
     width: 100%;
     padding: 10px;
     min-width: unset;
-  }
-
-  .menu-toggle {
-    font-size: 20px;
-    margin-bottom: 10px;
   }
 
   .contact-form input,
@@ -330,6 +341,7 @@ footer {
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
 /* ─────────────────────────────────────────────── */
 /* ✨ Section Scroll Animations */
 /* ─────────────────────────────────────────────── */
