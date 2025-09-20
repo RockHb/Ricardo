@@ -3,14 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gracias | Diseño y Estadística Biomédica</title>
+  <title>Quiénes Somos | Diseño y Estadística Biomédica</title>
   <link rel="stylesheet" href="css/style.css" />
-  <meta http-equiv="refresh" content="5;url=index.html" />
+  <meta name="description" content="Equipo médico especializado en estadística para ciencias de la salud. Más de 30 años de experiencia en investigación clínica y asesoramiento científico.">
+  <meta name="keywords" content="estadística médica, investigación clínica, asesoramiento científico, traducción científica">
   <style>
-    .countdown {
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
       font-size: 18px;
-      color: #1A2E40;
-      margin-top: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .home-button {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .home-button svg {
+      transition: transform 0.3s ease, fill 0.3s ease;
+      margin-right: 6px;
+    }
+
+    .home-button:hover svg {
+      transform: scale(1.2);
+      fill: #4DA1A9;
     }
   </style>
 </head>
@@ -24,6 +56,20 @@
       countdown.textContent = seconds;
       if (seconds <= 0) clearInterval(timer);
     }, 1000);
+  });  
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.nav-column a');
+    const currentPage = window.location.pathname.split('/').pop();
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
   });
 </script>
 <body>
