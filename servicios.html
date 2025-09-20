@@ -3,28 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Servicios | Diseño y Estadística Biomédica</title>
+  <title>Quiénes Somos | Diseño y Estadística Biomédica</title>
   <link rel="stylesheet" href="css/style.css" />
-  <meta name="description" content="Consultoría en diseño y estadística biomédica. Asesoramiento profesional para investigaciones clínicas y publicaciones científicas.">
-<meta name="keywords" content="estadística biomédica, diseño de estudios, publicaciones científicas, asesoría clínica">
+  <meta name="description" content="Equipo médico especializado en estadística para ciencias de la salud. Más de 30 años de experiencia en investigación clínica y asesoramiento científico.">
+  <meta name="keywords" content="estadística médica, investigación clínica, asesoramiento científico, traducción científica">
+  <style>
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .home-button {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .home-button svg {
+      transition: transform 0.3s ease, fill 0.3s ease;
+      margin-right: 6px;
+    }
+
+    .home-button:hover svg {
+      transform: scale(1.2);
+      fill: #4DA1A9;
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <img src="images/banner1.jpg" alt="Diseño y Estadística Biomédica Banner" class="banner" />
-  </header>
-  <script>
+<script>
   function toggleMenu() {
     const menu = document.getElementById("navMenu");
     menu.classList.toggle("active");
   }
 
-  // Highlight active link
-  const links = document.querySelectorAll('.nav-links a');
-  const current = window.location.pathname.split('/').pop();
-  links.forEach(link => {
-    if (link.getAttribute('href') === current) {
-      link.classList.add('active');
-    }
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.nav-column a');
+    const currentPage = window.location.pathname.split('/').pop();
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
   });
 </script>
 
