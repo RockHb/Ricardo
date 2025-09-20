@@ -1,4 +1,6 @@
-/* Reset & Base Styles */
+/* ─────────────────────────────────────────────── */
+/* 🔧 Reset & Base Styles */
+/* ─────────────────────────────────────────────── */
 * {
   box-sizing: border-box;
 }
@@ -16,7 +18,9 @@ body {
   padding: 20px;
 }
 
-/* Banner */
+/* ─────────────────────────────────────────────── */
+/* 🖼️ Banner */
+/* ─────────────────────────────────────────────── */
 .banner {
   width: 100%;
   height: auto;
@@ -24,7 +28,9 @@ body {
   margin-bottom: 0;
 }
 
-/* Navigation Menu */
+/* ─────────────────────────────────────────────── */
+/* 📂 Navigation Menu */
+/* ─────────────────────────────────────────────── */
 .navbar {
   background-color: #1A2E40;
   padding: 10px 20px;
@@ -39,6 +45,15 @@ body {
   align-items: flex-start;
 }
 
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
 .menu-toggle {
   background: none;
   border: none;
@@ -46,7 +61,38 @@ body {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #4DA1A9;
+  transform: scale(1.05);
+}
+
+.home-button {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.home-button svg {
+  transition: transform 0.3s ease, fill 0.3s ease;
+  margin-right: 6px;
+}
+
+.home-button:hover svg {
+  transform: scale(1.2);
+  fill: #4DA1A9;
+}
+
+.home-button:hover {
+  color: #4DA1A9;
 }
 
 .nav-columns {
@@ -102,7 +148,9 @@ body {
   border-bottom: 2px solid #4DA1A9;
 }
 
-/* Headings */
+/* ─────────────────────────────────────────────── */
+/* 🧠 Headings */
+/* ─────────────────────────────────────────────── */
 main h2 {
   color: #1A2E40;
   margin-top: 30px;
@@ -115,7 +163,9 @@ main h3 {
   font-size: 20px;
 }
 
-/* Lists */
+/* ─────────────────────────────────────────────── */
+/* 📋 Lists */
+/* ─────────────────────────────────────────────── */
 main ul {
   padding-left: 20px;
   margin-bottom: 20px;
@@ -125,7 +175,9 @@ main ul li {
   margin-bottom: 8px;
 }
 
-/* Contact Form */
+/* ─────────────────────────────────────────────── */
+/* 📨 Contact Form */
+/* ─────────────────────────────────────────────── */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -162,7 +214,9 @@ main ul li {
   background-color: #4DA1A9;
 }
 
-/* Footer */
+/* ─────────────────────────────────────────────── */
+/* 🧱 Footer */
+/* ─────────────────────────────────────────────── */
 footer {
   background-color: #1A2E40;
   color: white;
@@ -181,16 +235,15 @@ footer {
   margin: 8px 0;
   line-height: 1.6;
 }
+
 /* ─────────────────────────────────────────────── */
 /* 📱 Responsive Layout for Mobile Devices */
 /* ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Container */
   .container {
     padding: 15px;
   }
 
-  /* Headings */
   main h2 {
     font-size: 20px;
     margin-top: 20px;
@@ -201,7 +254,6 @@ footer {
     margin-top: 20px;
   }
 
-  /* Navigation */
   .nav-columns {
     flex-direction: column;
     gap: 10px;
@@ -218,7 +270,6 @@ footer {
     margin-bottom: 10px;
   }
 
-  /* Contact Form */
   .contact-form input,
   .contact-form textarea {
     font-size: 14px;
@@ -229,7 +280,6 @@ footer {
     padding: 10px;
   }
 
-  /* Footer */
   footer {
     padding: 20px 15px;
     font-size: 14px;
@@ -257,4 +307,18 @@ footer {
   height: auto;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+/* ─────────────────────────────────────────────── */
+/* ✨ Section Scroll Animations */
+/* ─────────────────────────────────────────────── */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
