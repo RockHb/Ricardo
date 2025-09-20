@@ -243,10 +243,11 @@ footer {
   align-items: flex-start;
 }
 
+
 .footer-icon {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   color: white;
   text-decoration: none;
   font-size: 15px;
@@ -257,9 +258,17 @@ footer {
   color: #4DA1A9;
 }
 
+
 .footer-icon svg {
   flex-shrink: 0;
 }
+
+.footer-icon .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 
 /* ─────────────────────────────────────────────── */
 /* 📱 Responsive Layout for Mobile Devices */
