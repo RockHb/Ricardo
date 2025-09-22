@@ -405,41 +405,6 @@ footer {
     min-width: unset;
   }
 
-    .nav-container {
-    padding: 4px 12px;
-  }
-
-  .nav-columns {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    padding: 6px 0;
-  }
-
-  .nav-columns.active {
-    display: flex;
-  }
-
-  .nav-column {
-    padding: 8px;
-    gap: 6px;
-  }
-
-  .nav-column a {
-    font-size: 14px;
-    padding: 6px 8px;
-  }
-
-    .nav-columns {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .nav-columns.active {
-    max-height: 500px; /* Adjust based on content */
-  }
-
   .contact-form input,
   .contact-form textarea {
     font-size: 14px;
