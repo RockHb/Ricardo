@@ -3,73 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiénes Somos | Diseño y Estadística Biomédica</title>
+  <title>Diseño y Estadística Científica | H&B</title>
   <link rel="stylesheet" href="css/style.css" />
-  <meta name="description" content="Equipo médico especializado en estadística para ciencias de la salud. Más de 30 años de experiencia en investigación clínica y asesoramiento científico.">
-  <meta name="keywords" content="estadística médica, investigación clínica, asesoramiento científico, traducción científica">
+  <meta name="description" content="Aplicaciones del diseño y la estadística científica en investigación biomédica.">
+  <meta name="keywords" content="diseño de estudios, investigación biomédica, estadística científica">
+
   <style>
-    .nav-header {
+    .card-grid {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
     }
 
-    .menu-toggle {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 calc(50% - 40px);
+      box-sizing: border-box;
+      transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
     }
 
-    .home-button {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      transition: color 0.3s ease;
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .home-button svg {
-      transition: transform 0.3s ease, fill 0.3s ease;
-      margin-right: 6px;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      background-color: #ffffff;
     }
 
-    .home-button:hover svg {
-      transform: scale(1.2);
-      fill: #4DA1A9;
+    .card h3 {
+      margin-top: 0;
+      color: #1A2E40;
+    }
+
+    .card p {
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.nav-column a');
-    const currentPage = window.location.pathname.split('/').pop();
-    links.forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
-
-  
 <body>
   <header>
     <img src="images/banner1.jpg" alt="Diseño y Estadística Biomédica Banner" class="banner" />
   </header>
 
-   <nav class="navbar">
+  <nav class="navbar">
     <div class="nav-container">
       <div class="nav-header">
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
@@ -93,92 +85,101 @@
         <div class="nav-column">
           <a href="produccionpropia.html">Producción propia</a>
           <a href="contacto.html">Contacto</a>
-    </div>
+        </div>
+      </div>
     </div>
   </nav>
 
-
-  <main class="container"> 
+  <main class="container">
     <section>
       <h2>Diseño y Estadística Científica</h2>
-        </section>
-
-    <section>
-      <h3>Aplicaciones del Diseño y la Estadística</h3>
-      <p>La investigación científica, ya sea biomédica (básica, clínica o aplicada), tecnológica, social o de cualesquiera otra de las áreas del conocimiento, es una actividad en la que se recurre al método científico a fin de ahondar en el conocimiento de temas relacionados con las disciplinas aludidas.</p>
-      <p>Por otra parte, la investigación biomédica incluye los estudios médicos y de comportamiento relativos a la salud humana. Es un tipo de actividad diseñada para desarrollar o contribuir al conocimiento generalizable, consistente en teorías, principios o relaciones, o acumulación de la información sobre la que se basan, que puede ser corroborado por métodos científicos aceptados de observación e inferencia.</p>
     </section>
 
-    <section>
-      <h3>La Investigación</h3>
-      <p>El término investigación se refiere a un tipo de actividad diseñada para desarrollar o contribuir al conocimiento generalizable. En el presente contexto, investigación incluye los estudios médicos y de comportamiento relativos a la salud humana. El término investigación se acompaña por el adjetivo biomédica para indicar su relación con la salud.</p>
-      <p>El progreso en la atención médica y en la prevención de enfermedades depende de la comprensión de procesos fisiológicos y patológicos o de descubrimientos epidemiológicos y, en algún momento, requiere investigación en seres humanos.</p>
-      <p>Las etapas del método científico incluyen: observación del fenómeno, descripción racional, construcción de hipótesis, verificación de factibilidad y resolución/inferencia causal.</p>
-      <p>En un experimento, el investigador controla las variables para minimizar el efecto de factores externos y compara condiciones que difieren solo en el factor objeto de estudio.</p>
-    </section>
+    <div class="card-grid">
+      <section class="card">
+        <h3>Aplicaciones del Diseño y la Estadística</h3>
+        <p>La investigación científica, ya sea biomédica (básica, clínica o aplicada), tecnológica, social o de otras áreas del conocimiento, recurre al método científico para profundizar en el conocimiento.</p>
+        <p>La investigación biomédica incluye estudios médicos y de comportamiento relativos a la salud humana. Contribuye al conocimiento generalizable mediante teorías, principios y relaciones verificables.</p>
+      </section>
 
-    <section>
-      <h3>Diseño de Estudios</h3>
-      <p>El diseño de un estudio hace referencia a la estrategia adoptada para cumplir los objetivos planteados: selección de unidades de estudio, registro y análisis de información, e interpretación de resultados.</p>
-      <p>Representa el conjunto de métodos y procedimientos para recolectar y examinar variables de interés. El diseño define el tipo de estudio (descriptivo, experimental, etc.), la dirección (retrospectivo, prospectivo, etc.), la hipótesis, las variables dependientes e independientes, y el plan de análisis estadístico.</p>
-    </section>
+      <section class="card">
+        <h3>La Investigación</h3>
+        <p>La investigación busca desarrollar conocimiento generalizable. En el contexto biomédico, incluye estudios médicos y de comportamiento relacionados con la salud.</p>
+        <p>El progreso médico depende de comprender procesos fisiológicos y patológicos, y requiere investigación en seres humanos.</p>
+        <p>Las etapas del método científico incluyen observación, hipótesis, verificación y resolución causal.</p>
+        <p>En un experimento, el investigador controla variables para minimizar factores externos y comparar condiciones específicas.</p>
+      </section>
 
-    <section>
-      <h3>Comparaciones y Control de Variables</h3>
-      <p>En muchos estudios se busca comparar grupos, tratamientos o condiciones. El diseño debe especificar la naturaleza de estas comparaciones y cómo se controlarán las variables confusoras.</p>
-      <p>También debe establecer el ámbito del estudio, cómo se realizarán las intervenciones, cómo se recolectarán los datos y qué información se dará a los sujetos. Es obligatorio obtener consentimiento informado.</p>
-      <p>Un buen diseño minimiza sesgos, garantiza sensibilidad para detectar efectos reales y contempla el poder estadístico para identificar asociaciones o diferencias significativas.</p>
-    </section>
+      <section class="card">
+        <h3>Diseño de Estudios</h3>
+        <p>El diseño de un estudio define la estrategia para cumplir objetivos: selección de unidades, recolección y análisis de datos, interpretación de resultados.</p>
+        <p>Incluye tipo de estudio, dirección temporal, hipótesis, variables y plan estadístico.</p>
+      </section>
 
-    <section>
-      <h3>Diseño o Proyecto de Investigación</h3>
-      <p>Para redactar un diseño o proyecto de investigación es indispensable conocer profundamente el tema, establecer relaciones, y evaluar métodos y recursos necesarios.</p>
-      <p>Investigar requiere planificación cuidadosa. La elección del diseño está ligada al tipo de pregunta de investigación. Un buen diseño es el pilar fundamental para alcanzar resultados válidos y útiles.</p>
-    </section>
+      <section class="card">
+        <h3>Comparaciones y Control de Variables</h3>
+        <p>Muchos estudios comparan grupos, tratamientos o condiciones. El diseño debe especificar cómo se controlan las variables confusoras.</p>
+        <p>Debe establecer el ámbito, intervenciones, recolección de datos y consentimiento informado.</p>
+        <p>Un buen diseño minimiza sesgos y garantiza sensibilidad para detectar efectos reales.</p>
+      </section>
+
+      <section class="card">
+        <h3>Diseño o Proyecto de Investigación</h3>
+        <p>Redactar un diseño requiere conocimiento profundo del tema, evaluación de métodos y planificación cuidadosa.</p>
+        <p>La elección del diseño depende de la pregunta de investigación. Un buen diseño es clave para obtener resultados válidos y útiles.</p>
+      </section>
+    </div>
   </main>
 
- <footer>
-  <div class="footer-content">
-    <h4>H&B</h4>
-    <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
-
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/hb-diseño-y-estadistica-2a15561b0" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/linkedin-icon.svg" alt="LinkedIn Institucional" class="icon" />
-        LinkedIn Institucional
-      </a>
-
-      <a href="https://www.linkedin.com/in/ricardo-heguilen-09b45765" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/linkedin-icon.svg" alt="LinkedIn Personal" class="icon" />
-        LinkedIn Personal
-      </a>
-
-      <a href="https://orcid.org/0000-0002-5243-3700" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/orcid-icon.svg" alt="ORCID" class="icon" />
-        ORCID
-      </a>
+  <footer>
+    <div class="footer-content">
+      <h4>H&B</h4>
+      <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/hb-diseño-y-estadistica-2a15561b0" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn Institucional" class="icon" />
+          LinkedIn Institucional
+        </a>
+        <a href="https://www.linkedin.com/in/ricardo-heguilen-09b45765" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn Personal" class="icon" />
+          LinkedIn Personal
+        </a>
+        <a href="https://orcid.org/0000-0002-5243-3700" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/orcid-icon.svg" alt="ORCID" class="icon" />
+          ORCID
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("main section");
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("active");
+    }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('.nav-column a');
+      const currentPage = window.location.pathname.split('/').pop();
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
         }
       });
-    }, {
-      threshold: 0.1
-    });
 
-    sections.forEach(section => {
-      observer.observe(section);
+      const cards = document.querySelectorAll(".card");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      cards.forEach(card => observer.observe(card));
     });
-  });
-</script>
+  </script>
 </body>
 </html>
