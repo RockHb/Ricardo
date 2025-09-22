@@ -46,29 +46,12 @@
     }
   </style>
 </head>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.nav-column a');
-    const currentPage = window.location.pathname.split('/').pop();
-    links.forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
-
 <body>
   <header>
     <img src="images/banner1.jpg" alt="Diseño y Estadística Biomédica Banner" class="banner" />
   </header>
 
- <nav class="navbar">
+  <nav class="navbar">
     <div class="nav-container">
       <div class="nav-header">
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
@@ -92,9 +75,11 @@
         <div class="nav-column">
           <a href="produccionpropia.html">Producción propia</a>
           <a href="contacto.html">Contacto</a>
-    </div>
+        </div>
+      </div>
     </div>
   </nav>
+
   <main class="container">
     <section>
       <h2>Publicaciones Propias y Referatos</h2>
@@ -105,99 +90,91 @@
       </div>
     </section>
 
-  <div class="card-grid">
-        <!-- Card 1 -->
-        <section class="card">
-          <h3>Revistas con publicaciones</h3>
-          <ul>
-            <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
-            <li>Prensa Médica Argentina</li>
-            <li>Revista de Nefrología -Argentina-</li>
-            <li>Revista Argentina de Gerontología y Geriatría</li>
-            <li>Nefrología (España)</li>
-            <li>Medicina, Buenos Aires</li>
-            <li>Medicina Cutánea Ibero-Latinoamericana</li>
-            <li>Transplant International</li>
-            <li>Journal of Cardiovascular Pharmacology</li>
-            <li>International Journal of Pharmaceutical Medicine</li>
-            <li>International Journal of Pediatric Otolaringology</li>
-            <li>Intercontinental Cardiology</li>
-            <li>Clinical Genetics</li>
-            <li>Clinical Kidney Journal</li>
-            <li>Clinical Cardiology</li>
-            <li>European Journal of Rheumatology</li>
-            <li>Clinical and Experimental Nephrology</li>
-            <li>Dialysis and Transplant</li>
-            <li>Chemotherapy</li>
-            <li>Nephrology, Dialysis and Transplantation</li>
-            <li>American Journal of Kidney Diseases</li>
-            <li>Nephrology (Carlton)</li>
-          </ul>
-        </section>
-    <!-- Card 2 -->
-        <section class="card">
-          <h3>Revisores en Revistas Científicas</h3>
-          <ul>
-            <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
-            <li>Nefrología Latinoamericana (Elsevier)</li>
-            <li>Electron Journal of Medicine</li>
-            <li>Nephrology (Carlton)</li>
-            <li>Journal of Nephrology and Therapeutics</li>
-            <li>World Journal of Nephrology</li>
-            <li>American Journal of Kidney Diseases</li>
-            <li>Nephrology, Dialysis and Transplantation</li>
-            <li>Biocybernetics and Biomedical Engineering</li>
-          </ul>
-        </section>
-    <!-- Card 3 -->
-        <section class="card">
-          <h3>Premios Nacionales e Internacionales</h3>
-          <ul>
-            <li>Premio Sociedad Ibero-Latinoamericana de Dermatología (1984–1985)</li>
-            <li>Premio “Victor Raúl Miatello” – Sociedad Argentina de Nefrología</li>
-            <li>Premio Sociedad de Obstetricia y Ginecología de Buenos Aires (1998)</li>
-            <li>Premio “Peter Brandt” – Asociación de Médicos Asesores (2001)</li>
-            <li>Mención Especial – National Kidney Foundation (2002)</li>
-            <li>Mención Especial – Sociedad Argentina de Nefrología (2003)</li>
-            <li>Blue Ribbon Poster – Congreso Mundial de Nefrología, Berlín (2003)</li>
-            <li>Premio al Mejor Resumen – XV Congreso Argentino de Nefrología (2007)</li>
-            <li>2do Premio – Hospital Juan A. Fernández (2008)</li>
-            <li>Beca – Sociedad Española de Nefrología (2009)</li>
-            <li>Premio al Mejor Poster – Asociación Nefrológica de Buenos Aires (2010)</li>
-            <li>Poster Distinguido – Asociación Nefrológica de Buenos Aires (2012)</li>
-            <li>Beca – SLANH (2012)</li>
-            <li>Beca – ASN/SLANH Kidney Week San Diego (2012, 2015)</li>
-            <li>Premio Amílcar Challu – ANBA (2016)</li>
-            <li>Trabajo Distinguido – ANBA (2018)</li>
-            <li>Trabajo Distinguido – XXI Congreso Argentino de Nefrología (2019)</li>
-          </ul>
-        </section>
+    <div class="card-grid">
+      <section class="card">
+        <h3>Revistas con publicaciones</h3>
+        <ul>
+          <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
+          <li>Prensa Médica Argentina</li>
+          <li>Revista de Nefrología -Argentina-</li>
+          <li>Revista Argentina de Gerontología y Geriatría</li>
+          <li>Nefrología (España)</li>
+          <li>Medicina, Buenos Aires</li>
+          <li>Medicina Cutánea Ibero-Latinoamericana</li>
+          <li>Transplant International</li>
+          <li>Journal of Cardiovascular Pharmacology</li>
+          <li>International Journal of Pharmaceutical Medicine</li>
+          <li>International Journal of Pediatric Otolaringology</li>
+          <li>Intercontinental Cardiology</li>
+          <li>Clinical Genetics</li>
+          <li>Clinical Kidney Journal</li>
+          <li>Clinical Cardiology</li>
+          <li>European Journal of Rheumatology</li>
+          <li>Clinical and Experimental Nephrology</li>
+          <li>Dialysis and Transplant</li>
+          <li>Chemotherapy</li>
+          <li>Nephrology, Dialysis and Transplantation</li>
+          <li>American Journal of Kidney Diseases</li>
+          <li>Nephrology (Carlton)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Revisores en Revistas Científicas</h3>
+        <ul>
+          <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
+          <li>Nefrología Latinoamericana (Elsevier)</li>
+          <li>Electron Journal of Medicine</li>
+          <li>Nephrology (Carlton)</li>
+          <li>Journal of Nephrology and Therapeutics</li>
+          <li>World Journal of Nephrology</li>
+          <li>American Journal of Kidney Diseases</li>
+          <li>Nephrology, Dialysis and Transplantation</li>
+          <li>Biocybernetics and Biomedical Engineering</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Premios Nacionales e Internacionales</h3>
+        <ul>
+          <li>Premio Sociedad Ibero-Latinoamericana de Dermatología (1984–1985)</li>
+          <li>Premio “Victor Raúl Miatello” – Sociedad Argentina de Nefrología</li>
+          <li>Premio Sociedad de Obstetricia y Ginecología de Buenos Aires (1998)</li>
+          <li>Premio “Peter Brandt” – Asociación de Médicos Asesores (2001)</li>
+          <li>Mención Especial – National Kidney Foundation (2002)</li>
+          <li>Mención Especial – Sociedad Argentina de Nefrología (2003)</li>
+          <li>Blue Ribbon Poster – Congreso Mundial de Nefrología, Berlín (2003)</li>
+          <li>Premio al Mejor Resumen – XV Congreso Argentino de Nefrología (2007)</li>
+          <li>2do Premio – Hospital Juan A. Fernández (2008)</li>
+          <li>Beca – Sociedad Española de Nefrología (2009)</li>
+          <li>Premio al Mejor Poster – Asociación Nefrológica de Buenos Aires (2010)</li>
+          <li>Poster Distinguido – Asociación Nefrológica de Buenos Aires (2012)</li>
+          <li>Beca – SLANH (2012)</li>
+          <li>Beca – ASN/SLANH Kidney Week San Diego (2012, 2015)</li>
+          <li>Premio Amílcar Challu – ANBA (2016)</li>
+          <li>Trabajo Distinguido – ANBA (2018)</li>
+          <li>Trabajo Distinguido – XXI Congreso Argentino de Nefrología (2019)</li>
+        </ul>
+      </section>
     </div>
   </main>
 
-   <footer>
-  <div class="footer-content">
-    <h4>H&B</h4>
-    <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
-
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/hb-diseño-y-estadistica-2a15561b0" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/linkedin-icon.svg" alt="LinkedIn Institucional" class="icon" />
-        LinkedIn Institucional
-      </a>
-
-      <a href="https://www.linkedin.com/in/ricardo-heguilen-09b45765" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/linkedin-icon.svg" alt="LinkedIn Personal" class="icon" />
-        LinkedIn Personal
-      </a>
-
-      <a href="https://orcid.org/0000-0002-5243-3700" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/orcid-icon.svg" alt="ORCID" class="icon" />
-        ORCID
-      </a>
-    </div>
-  </div>
-</footer>
+  <footer>
+    <div class="footer-content">
+      <h4>H&B</h4>
+      <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/hb-diseño-y-estadistica-2a15561b0" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn Institucional" class="icon" />
+          LinkedIn Institucional
+        </a>
+        <a href="https://www.linkedin.com/in/ricardo-heguilen-09b45765" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn Personal" class="icon" />
+          LinkedIn Personal
+        </a>
+        <a href="https://orcid.org/0000-0002-5243-3700" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/orcid-icon.svg" alt="ORCID" class="icon" />
+          ORCID
 <script>
   function toggleMenu() {
     const menu = document.getElementById("navMenu");
