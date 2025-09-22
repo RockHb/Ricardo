@@ -159,9 +159,9 @@
 </footer>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Animate sections on scroll
     const sections = document.querySelectorAll("main section");
-
-    const observer = new IntersectionObserver((entries) => {
+    const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
@@ -170,10 +170,22 @@
     }, {
       threshold: 0.1
     });
-
     sections.forEach(section => {
-      observer.observe(section);
+      sectionObserver.observe(section);
     });
+
+    // Animate cards on scroll
+    const cards = document.querySelectorAll(".card");
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    cards.forEach(card => cardObserver.observe(card));
   });
 </script>
 </body>
