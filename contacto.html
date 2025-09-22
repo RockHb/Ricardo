@@ -99,29 +99,29 @@
 
 
   <main class="container">
-    <section>
-      <h2>Contacto</h2>
-      <p>¿Tenés dudas, querés inscribirte en un curso o solicitar asesoramiento? Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+        <section>
+          <h2>Contacto</h2>
+          <p>¿Tenés dudas, querés inscribirte en un curso o solicitar asesoramiento? Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+        </section>
+
+        <section>
+          <form name="contacto" method="POST" data-netlify="true" action="gracias.html" class="contact-form">
+            <input type="hidden" name="form-name" value="contacto" />
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+
     </section>
-
-    <section>
-      <form name="contacto" method="POST" data-netlify="true" action="gracias.html" class="contact-form">
-  <input type="hidden" name="form-name" value="contacto" />
-
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre" required />
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required />
-
-  <label for="mensaje">Mensaje:</label>
-  <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-  <button type="submit">Enviar</button>
-</form>
-
-    </section>
-
+  </main>
      
  <footer>
   <div class="footer-content">
