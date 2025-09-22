@@ -54,6 +54,18 @@ body {
   padding: 20px;
 }
 
+/* Ensure LinkedIn & ORCID text in Main container is visible */
+.social-links .footer-icon,
+.social-links .footer-icon span {
+  color: #000;   /* black text */
+}
+
+.social-links .footer-icon:hover,
+.social-links .footer-icon:hover span {
+  color: #4DA1A9; /* keep hover consistent with your theme */
+}
+
+
 /* ─────────────────────────────────────────────── */
 /* 🖼️ Banner */
 /* ─────────────────────────────────────────────── */
