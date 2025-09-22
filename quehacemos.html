@@ -221,7 +221,23 @@
           <li>Dominio del lenguaje técnico y jerga científica</li>
         </ul>
       </section>
-
+<!-- Card 6 -->
+      <section class="card">
+        <h3>Apoyo en Lectura Crítica y Revisión Metodológica</h3>
+        <ul>
+          <li>Revisión sistematizada de manuscritos científicos</li>
+          <li>Lectura crítica de publicaciones</li>
+          <li>Revisión de protocolos y presentaciones</li>
+          <li>Confección de trabajos para:/li>
+            <ul>
+              <li>Comunicaciones y posters</li>
+              <li>Tesis doctorales y postdoctorales</li>
+              <li>Revistas con referato</li>
+              <li>Capítulos de libros</li>
+            </ul>
+          
+        </ul>
+      </section>
   </main>
 
  <footer>
@@ -266,5 +282,38 @@
     });
   });
 </script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Highlight current page link
+    const links = document.querySelectorAll('.nav-column a');
+    const currentPage = window.location.pathname.split('/').pop();
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // Animate cards on scroll
+    const cards = document.querySelectorAll(".card");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
+
 </body>
 </html>

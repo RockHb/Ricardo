@@ -390,3 +390,67 @@ section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ─────────────────────────────────────────────── */
+/* 🧾 Card Layout for Service Sections */
+/* ─────────────────────────────────────────────── */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 calc(50% - 40px);
+  box-sizing: border-box;
+  transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🖱️ Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+/* 🧠 Card Headings */
+.card h3 {
+  margin-top: 0;
+  color: #1A2E40;
+}
+
+/* 📋 Card Lists */
+.card ul {
+  padding-left: 20px;
+}
+
+/* 🖼️ Card Images */
+.card .image-wrapper {
+  margin-bottom: 15px;
+}
+
+.card .responsive-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* 📱 Responsive Cards */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
