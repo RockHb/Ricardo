@@ -107,9 +107,11 @@
 
     </section>
 
-    <section>
-      <h3>Revistas con Publicaciones</h3>
-      <ul>
+<div class="card-grid">
+      <!-- Card 1 -->
+      <section class="card">
+        <h3>Revistas con publicaciones</h3>
+        <ul>
         <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
         <li>Prensa Médica Argentina</li>
         <li>Revista de Nefrología -Argentina-</li>
@@ -132,13 +134,13 @@
         <li>Nephrology, Dialysis and Transplantation</li>
         <li>American Journal of Kidney Diseases</li>
         <li>Nephrology (Carlton)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Revisores en Revistas Científicas</h3>
-      <ul>
-        <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
+        </ul>
+      </section>
+<!-- Card 2 -->
+      <section class="card">
+        <h3>Revisores en Revistas Científicas</h3>
+        <ul>
+       <li>Revista Argentina de Nefrología, Diálisis y Trasplante</li>
         <li>Nefrología Latinoamericana (Elsevier)</li>
         <li>Electron Journal of Medicine</li>
         <li>Nephrology (Carlton)</li>
@@ -147,13 +149,13 @@
         <li>American Journal of Kidney Diseases</li>
         <li>Nephrology, Dialysis and Transplantation</li>
         <li>Biocybernetics and Biomedical Engineering</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Premios Nacionales e Internacionales</h3>
-      <ul>
-        <li>Premio Sociedad Ibero-Latinoamericana de Dermatología (1984–1985)</li>
+        </ul>
+      </section>
+  <!-- Card 3 -->
+      <section class="card">
+        <h3>Premios Nacionales e Internacionales/h3>
+        <ul>
+       <li>Premio Sociedad Ibero-Latinoamericana de Dermatología (1984–1985)</li>
         <li>Premio “Victor Raúl Miatello” – Sociedad Argentina de Nefrología</li>
         <li>Premio Sociedad de Obstetricia y Ginecología de Buenos Aires (1998)</li>
         <li>Premio “Peter Brandt” – Asociación de Médicos Asesores (2001)</li>
@@ -170,8 +172,8 @@
         <li>Premio Amílcar Challu – ANBA (2016)</li>
         <li>Trabajo Distinguido – ANBA (2018)</li>
         <li>Trabajo Distinguido – XXI Congreso Argentino de Nefrología (2019)</li>
-      </ul>
-    </section>
+        </ul>
+      </section>
   </main>
 
    <footer>
@@ -198,9 +200,23 @@
   </div>
 </footer>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("main section");
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    // Highlight current page link
+    const links = document.querySelectorAll('.nav-column a');
+    const currentPage = window.location.pathname.split('/').pop();
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // Animate cards on scroll
+    const cards = document.querySelectorAll(".card");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -211,9 +227,7 @@
       threshold: 0.1
     });
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
+    cards.forEach(card => observer.observe(card));
   });
 </script>
 </body>
