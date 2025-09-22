@@ -11,6 +11,42 @@ body {
   background: #F5F7FA;
   color: #2C2C2C;
 }
+/* ─────────────────────────────────────────────── */
+/* 🌐 Social Links Enhancement */
+/* ─────────────────────────────────────────────── */
+.social-links {
+  display: flex;
+  gap: 24px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #2C2C2C;
+  font-size: 1.1em;
+  font-weight: 500;
+  background: #f0f4f8;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.social-item:hover {
+  background: #e6f7ff;
+  box-shadow: 0 4px 16px rgba(77,161,169,0.12);
+  color: #4DA1A9;
+}
+
+.social-item .icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 
 .container {
   max-width: 1000px;
