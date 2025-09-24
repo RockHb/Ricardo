@@ -160,49 +160,52 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("navMenu");
-      menu.classList.toggle("active");
-    }
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const links = document.querySelectorAll('.nav-column a');
-      const currentPage = window.location.pathname.split('/').pop();
-      links.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-          link.classList.add('active');
+  document.addEventListener("DOMContentLoaded", function () {
+    // Highlight current nav link
+    const links = document.querySelectorAll('.nav-column a');
+    const currentPage = window.location.pathname.split('/').pop();
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // ORCID Widget Fetch via Netlify Function
+    const apiUrl = `/.netlify/functions/orcid`;
+    fetch(apiUrl, {
+      headers: { "Accept": "application/json" }
+    })
+    .then(response => response.json())
+    .then(data => {
+      const name = `${data.name?.givenNames?.value || ""} ${data.name?.familyName?.value || ""}`;
+      const affiliation = data?.employments?.employmentSummary?.[0]?.organization?.name || "Afiliación no disponible";
+
+      document.getElementById("orcid-name").textContent = `Nombre: ${name}`;
+      document.getElementById("orcid-affiliation").textContent = `Afiliación: ${affiliation}`;
+    })
+    .catch(error => {
+      document.getElementById("orcid-name").textContent = "No se pudo cargar el perfil ORCID.";
+      console.error("Error ORCID API:", error);
+    });
+
+    // ORCID Animation Trigger
+    const widget = document.getElementById("orcid-profile");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          widget.classList.add("visible");
+          observer.unobserve(widget);
         }
       });
+    }, { threshold: 0.1 });
 
-      // ORCID Widget Fetch
-     // const orcidId = "0000-0002-5243-3700";
-      const apiUrl = `/.netlify/functions/orcid`;
-      fetch(apiUrl, {
-        headers: { "Accept": "application/json" }
-      })
-      .then(response => response.json())
-      .then(data => {
-        const name = `${data.name?.givenNames?.value || ""} ${data.name?.familyName?.value || ""}`;
-        const affiliation = data?.employments?.employmentSummary?.[0]?.organization?.name || "Afiliación no disponible";
-
-        document.getElementById("orcid-name").textContent = `Nombre: ${name}`;
-        document.getElementById("orcid-affiliation").textContent = `Afiliación: ${affiliation}`;
-      })
-      .catch(error => {
-        document.getElementById("orcid-name").textContent = "No se pudo cargar el perfil ORCID.";
-        console.error("Error ORCID API:", error);
-      });
-
-      // ORCID Animation
-      const widget = document.getElementById("orcid-profile");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            widget.classList.add("visible");
-            observer.unobserve(widget);
-          }
-        });
-      }, { threshold: 0.1 });
+    observer.observe(widget);
+  });
 </script>
 </body>
 </html>
