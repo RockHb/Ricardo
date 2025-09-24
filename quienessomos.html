@@ -176,24 +176,16 @@
     });
 
     // ORCID Widget Fetch via Netlify Function
-    const apiUrl = `/.netlify/functions/orcid`;
-    fetch(apiUrl, {
+    fetch("/.netlify/functions/orcid", {
       headers: { "Accept": "application/json" }
     })
     .then(response => response.json())
     .then(data => {
-      let name = "Nombre no disponible";
-      let affiliation = "Afiliación no disponible";
+      const name = data?.person?.name?.givenNames?.value && data?.person?.name?.familyName?.value
+        ? `${data.person.name.givenNames.value} ${data.person.name.familyName.value}`
+        : "Nombre no disponible";
 
-      if (data?.name?.givenNames?.value || data?.name?.familyName?.value) {
-        const first = data.name?.givenNames?.value || "";
-        const last = data.name?.familyName?.value || "";
-        name = `${first} ${last}`.trim();
-      }
-
-      if (Array.isArray(data?.employments?.employmentSummary) && data.employments.employmentSummary.length > 0) {
-        affiliation = data.employments.employmentSummary[0]?.organization?.name || affiliation;
-      }
+      const affiliation = data?.activitiesSummary?.employments?.employmentSummary?.[0]?.organization?.name || "Afiliación no disponible";
 
       document.getElementById("orcid-name").textContent = `Nombre: ${name}`;
       document.getElementById("orcid-affiliation").textContent = `Afiliación: ${affiliation}`;
