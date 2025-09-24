@@ -192,7 +192,6 @@
     })
     .catch(error => {
       document.getElementById("orcid-name").textContent = "No se pudo cargar el perfil ORCID.";
-      document.getElementById("orcid-affiliation").textContent = "Afiliación no disponible.";
       console.error("Error ORCID API:", error);
     });
 
