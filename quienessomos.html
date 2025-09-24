@@ -182,18 +182,8 @@
     })
     .then(response => response.json())
     .then(data => {
-      let name = "Nombre no disponible";
-      let affiliation = "Afiliación no disponible";
-
-      if (data?.name?.givenNames?.value || data?.name?.familyName?.value) {
-        const first = data.name?.givenNames?.value || "";
-        const last = data.name?.familyName?.value || "";
-        name = `${first} ${last}`.trim();
-      }
-
-      if (Array.isArray(data?.employments?.employmentSummary) && data.employments.employmentSummary.length > 0) {
-        affiliation = data.employments.employmentSummary[0]?.organization?.name || affiliation;
-      }
+      const name = `${data.name?.givenNames?.value || ""} ${data.name?.familyName?.value || ""}`;
+      const affiliation = data?.employments?.employmentSummary?.[0]?.organization?.name || "Afiliación no disponible";
 
       document.getElementById("orcid-name").textContent = `Nombre: ${name}`;
       document.getElementById("orcid-affiliation").textContent = `Afiliación: ${affiliation}`;
