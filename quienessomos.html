@@ -44,25 +44,28 @@
       transform: scale(1.2);
       fill: #4DA1A9;
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #orcid-profile {
+      background-color: #F1F8E9;
+      border-left: 4px solid #2E7D32;
+      padding: 12px 16px;
+      margin: 20px 0;
+      border-radius: 6px;
+      font-family: 'Segoe UI', sans-serif;
+    }
   </style>
 </head>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.nav-column a');
-    const currentPage = window.location.pathname.split('/').pop();
-    links.forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
-
 <body>
   <header>
     <img src="images/banner1.jpg" alt="Diseño y Estadística Biomédica Banner" class="banner" />
@@ -92,68 +95,36 @@
         <div class="nav-column">
           <a href="produccionpropia.html">Producción propia</a>
           <a href="contacto.html">Contacto</a>
-    </div>
+        </div>
+      </div>
     </div>
   </nav>
 
-<main class="container">
+  <main class="container">
     <section>
       <h2>H&B Quiénes Somos</h2>
-      
+
       <p>Somos Médicos Especialistas en Estadística para Ciencias de la Salud. Egresados de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires, así como también del Curso de Medicina Farmacéutica dictado por la Asociación de Médicos Asesores de la Industria Farmacéutica y la Asociación Médica Argentina.</p>
 
       <p>Somos básicamente Médicos Especialistas en Nefrología y Medio Interno, egresados de la Facultad de Medicina de la Universidad de Buenos Aires.</p>
 
       <p>Contamos con más de treinta años ininterrumpidos ejerciendo la especialidad y acumulando amplia experiencia que abarca no sólo los aspectos asistenciales sino también aspectos de investigación básica y clínica de la disciplina.</p>
 
-      <!-- ORCID Badge -->
-      <a href="https://orcid.org/0000-0002-5243-3700" target="_blank" rel="noopener noreferrer">
-        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon" style="vertical-align:middle; margin-right:4px;">
-        ORCID: 0000-0002-5243-3700
-      </a>
-
-              <!-- ORCID Badge with Custom Styling 
-        <a href="https://orcid.org/0000-0002-5243-3700" class="orcid-link" target="_blank" rel="noopener noreferrer">
-          <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon">
-          ORCID: 0000-0002-5243-3700
-        </a>
-
-        <style>
-          .orcid-link {
-            display: inline-flex;
-            align-items: center;
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 0.95rem;
-            color: #2E7D32; /* ORCID green tone */
-            text-decoration: none;
-            border: 1px solid #C8E6C9;
-            padding: 6px 10px;
-            border-radius: 6px;
-            background-color: #F1F8E9;
-            transition: all 0.3s ease;
-          }
-
-          .orcid-link img {
-            margin-right: 8px;
-            width: 16px;
-            height: 16px;
-          }
-
-          .orcid-link:hover {
-            background-color: #C8E6C9;
-            border-color: #81C784;
-            color: #1B5E20;
-          }
-        </style> 
-        -->
-
-
+      <!-- ORCID Widget -->
+      <div id="orcid-profile" class="fade-in">
+        <h3>Perfil ORCID</h3>
+        <p id="orcid-name">Cargando nombre...</p>
+        <p id="orcid-affiliation">Cargando afiliación...</p>
+      </div>
     </section>
- <section>
-    <div class="image-wrapper">
-    <img src="images/quienes.jpg" alt="Publicaciones científicas" class="responsive-image" />
-  </div>
-  </section>
+
+    <section>
+      <div class="image-wrapper">
+        <img src="images/quienes.jpg" alt="Publicaciones científicas" class="responsive-image" />
+      </div>
+    </section>
+
+    <section>
       <p>Poseemos una considerable trayectoria como asesores en Investigaciones Clínicas, no sólo para emprendimientos individuales sino también para la industria farmacéutica e instituciones académicas.</p>
 
       <p>Estamos ampliamente dedicados a la gestión de proyectos en áreas relacionadas con la investigación básica y clínica, y en especial al asesoramiento en diseño, análisis estadístico y comunicación de estudios relacionados con la ciencia y la tecnología.</p>
@@ -162,49 +133,77 @@
 
       <p>Traducimos textos y artículos científicos garantizando un resultado de elevada calidad.</p>
     </section>
-</main>
+  </main>
 
-   <footer>
-  <div class="footer-content">
-    <h4>H&B</h4>
-    <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
+  <footer>
+    <div class="footer-content">
+      <h4>H&B</h4>
+      <p>Consultores en Diseño y Estadística para Disciplinas de la Salud</p>
 
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/hb-diseño-y-estadistica-2a15561b0" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/linkedin-icon.svg" alt="LinkedIn Institucional" class="icon" />
-        LinkedIn Institucional
-      </a>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/hb-diseño-y-estadistica-2a15561b0" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn Institucional" class="icon" />
+          LinkedIn Institucional
+        </a>
 
-      <a href="https://www.linkedin.com/in/ricardo-heguilen-09b45765" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/linkedin-icon.svg" alt="LinkedIn Personal" class="icon" />
-        LinkedIn Personal
-      </a>
+        <a href="https://www.linkedin.com/in/ricardo-heguilen-09b45765" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn Personal" class="icon" />
+          LinkedIn Personal
+        </a>
 
-      <a href="https://orcid.org/0000-0002-5243-3700" target="_blank" rel="noopener noreferrer" class="footer-icon">
-        <img src="images/orcid-icon.svg" alt="ORCID" class="icon" />
-        ORCID
-      </a>
+        <a href="https://orcid.org/0000-0002-5243-3700" target="_blank" rel="noopener noreferrer" class="footer-icon">
+          <img src="images/orcid-icon.svg" alt="ORCID" class="icon" />
+          ORCID
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("main section");
+  </footer>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('.nav-column a');
+      const currentPage = window.location.pathname.split('/').pop();
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
         }
       });
-    }, {
-      threshold: 0.1
-    });
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  });
+      // ORCID Widget Fetch
+      const orcidId = "0000-0002-5243-3700";
+      const apiUrl = `https://pub.orcid.org/v3.0/${orcidId}/person`;
+
+      fetch(apiUrl, {
+        headers: { "Accept": "application/json" }
+      })
+      .then(response => response.json())
+      .then(data => {
+        const name = `${data.name?.givenNames?.value || ""} ${data.name?.familyName?.value || ""}`;
+        const affiliation = data?.employments?.employmentSummary?.[0]?.organization?.name || "Afiliación no disponible";
+
+        document.getElementById("orcid-name").textContent = `Nombre: ${name}`;
+        document.getElementById("orcid-affiliation").textContent = `Afiliación: ${affiliation}`;
+      })
+      .catch(error => {
+        document.getElementById("orcid-name").textContent = "No se pudo cargar el perfil ORCID.";
+        console.error("Error ORCID API:", error);
+      });
+
+      // ORCID Animation
+      const widget = document.getElementById("orcid-profile");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            widget.classList.add("visible");
+            observer.unobserve(widget);
+          }
+        });
+      }, { threshold: 0.1 });
 </script>
 </body>
 </html>
