@@ -1,5 +1,7 @@
+const fetch = require("node-fetch");
+
 exports.handler = async function(event, context) {
-  const orcidId = "0000-0002-5243-3700"; // Replace with your ORCID iD
+  const orcidId = "0000-0002-5243-3700";
   const url = `https://pub.orcid.org/v3.0/${orcidId}/person`;
 
   try {
